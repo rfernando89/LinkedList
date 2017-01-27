@@ -8,18 +8,33 @@
 
 #include <iostream>
 
+class Node
+{
+private:
+    Node * next;
+    
+public:
+    
+    int data;
+    
+    Node()
+    {
+        data = 0;
+    }
+};
+
 class LinkedList
 {
 private:
     // Node for the Linked List
-    struct Node       
+    struct Node
     {
         int data;
         Node * next;
     };
     
     Node * head;
-    Node * currentPtr;    
+    Node * currentPtr;
     Node * previous;
     
 public:
@@ -108,7 +123,7 @@ public:
         else
         {
             Node * deletePointer;
-        
+            
             deletePointer = head;
             head = head->next;
             delete deletePointer;
@@ -161,13 +176,13 @@ public:
         else
         {
             std::cout << "List" << std::endl;
-        
+            
             while(temp != NULL)
             {
                 std::cout << temp->data << std::endl;
                 temp = temp->next;
             }
-        
+            
             std::cout << std::endl;
         }
     }
@@ -176,15 +191,15 @@ public:
 int main()
 {
     /*
-    LinkedList testStack;
-    testStack.push(5);
-    testStack.push(6);
-    testStack.push(7);
-    testStack.printList();
-
-
-    testStack.pop();
-    testStack.printList();
+     LinkedList testStack;
+     testStack.push(5);
+     testStack.push(6);
+     testStack.push(7);
+     testStack.printList();
+     
+     
+     testStack.pop();
+     testStack.printList();
      */
     
     LinkedList testQ;
@@ -194,17 +209,13 @@ int main()
     testQ.enqueue(8);
     testQ.enqueue(9);
     testQ.enqueue(10);
-
+    
     testQ.printList();
     
-  //  testQ.deleteKey(5);
+    //  testQ.deleteKey(5);
     testQ.deleteKey(5);
     testQ.deleteKey(6);
     testQ.deleteKey(7);
-    
-
-
-    
     
     testQ.printList();
     
