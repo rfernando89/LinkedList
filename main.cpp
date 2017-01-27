@@ -14,7 +14,6 @@ private:
     Node * next;
     
 public:
-    
     int data;
     
     Node()
