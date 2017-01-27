@@ -10,28 +10,21 @@
 
 class Node
 {
-private:
-    Node * next;
-    
 public:
-    int data;
     
+    int data;
+    Node * next;
+
     Node()
     {
         data = 0;
+        next = NULL;
     }
 };
 
 class LinkedList
 {
 private:
-    // Node for the Linked List
-    struct Node
-    {
-        int data;
-        Node * next;
-    };
-    
     Node * head;
     Node * currentPtr;
     Node * previous;
