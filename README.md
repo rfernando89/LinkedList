@@ -1,2 +1,2 @@
 # LinkedList
-Practice Linked List and Github
+Practice Linked List Implementation
